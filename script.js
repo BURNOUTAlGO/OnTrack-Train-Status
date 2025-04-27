@@ -190,4 +190,12 @@ document.addEventListener("DOMContentLoaded", function () {
       fetchpnrdetails(pnr);
     }
   });
+
+  // AUTO CLICK ON THE SEARCH BUTTON WHWN PRESS ENTER KEY ON KEYBOARD
+
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") { 
+      searchButton.click(); // Trigger the button click
+    }
+  });
 });

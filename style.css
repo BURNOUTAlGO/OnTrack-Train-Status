@@ -94,6 +94,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* background-color: blue; */
+  overflow: hidden;
 }
 
 .head {
@@ -116,6 +118,7 @@ body {
   height: 100%;
   width: 100%;
   top: 0;
+  left: 0;
   object-fit: cover;
 }
 
@@ -352,20 +355,24 @@ body {
   width: 100%;
   display: none;
 }
-
-.head,
-.desc {
-  color: #fff;
-  /* white-space: nowrap; */
-  animation: slideRight 1.4s ease-in-out;
+.head-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 150px; */
 }
 
-@keyframes slideRight {
+.head{
+  color: #fff;
+  animation: slideDown 1.3s ease-in-out;
+}
+
+@keyframes slideDown {
   0% {
-    transform: translateX(-100%);
+    transform: translateY(-100%);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
 }
 
