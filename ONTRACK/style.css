@@ -1,0 +1,512 @@
+@font-face {
+  font-family: Myfont;
+  src: url(fonts/ppneuemontreal-book.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Myfont;
+  /* color: white; */
+  color: white;
+}
+
+body {
+  background-color: black;
+}
+
+/* header section  */
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  height: 70px;
+  width: 100%;
+}
+
+.header-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5rem;
+  padding-left: 5rem;
+  background: rgba(0, 0, 0, 0.705);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(17px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.219);
+}
+
+.header-title {
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+}
+
+.nav-bar {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: rgb(142, 142, 142);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nav-link:hover {
+  color: white;
+  transition-duration: 300ms;
+}
+
+/* menu hamburger */
+.menu_button {
+  display: none;
+  border: none;
+  background-color: var(--base-color);
+}
+.menu_icon {
+  height: 3rem;
+  width: 3rem;
+  padding: 2px;
+  filter: var(--svg-color1);
+}
+
+.hero-container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  position: absolute;
+  z-index: 3;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.head {
+  color: white;
+  font-size: 8rem;
+  text-shadow: rgb(0, 0, 0) 1px 0 20px;
+}
+
+.desc {
+  color: white;
+  font-size: 1rem;
+  text-shadow: rgb(0, 0, 0) 1px 0 10px;
+}
+
+/* banner section */
+
+.banner-img {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  object-fit: cover;
+}
+
+/* INPUT SECTION */
+.input-maincon {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container {
+  width: 90%;
+  height: 65px;
+  border-radius: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: rgba(0, 0, 0, 0.258);
+  position: relative;
+}
+
+.input-pnr {
+  width: 96%;
+  height: 45px;
+  border-radius: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: large;
+  outline: none;
+  border: none;
+  background-color: rgb(0, 0, 0);
+}
+
+.search-button {
+  position: absolute;
+  top: 70px;
+  height: 45px;
+  width: 140px;
+  border-radius: 5rem;
+  background-color: rgb(54, 147, 0);
+  box-shadow: 0 4px 11px rgba(33, 33, 33, 0.486);
+  font-size: large;
+  color: white;
+  font-weight: bold;
+  border-style: none;
+}
+
+.search-button:hover {
+  background-color: rgb(0, 86, 9);
+  transition-duration: 300ms;
+}
+
+.train-sec-det {
+  width: 100%;
+  top: 95px;
+  position: relative;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.Train-detail-section {
+  /* height: auto; */
+  position: absolute;
+  width: 90%;
+  top: 25%;
+  margin-inline: auto;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 11px rgba(29, 29, 29, 0.188);
+  display: none;
+}
+
+.train-no-name {
+  width: 100%;
+  height: 20%;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  background-color: rgb(0, 171, 11);
+  color: white;
+}
+
+.train-no,
+.train-name {
+  font-weight: bold;
+}
+.class-name {
+  text-align: end;
+  font-weight: bold;
+}
+
+.train-details {
+  width: 100%;
+  height: 80%;
+  background-color: rgba(78, 216, 78, 0.189);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+}
+
+.box1 {
+  height: 10%;
+  width: 100%;
+  /* background-color:black; */
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.box1 p {
+  font-size: 15px;
+}
+
+.box2 {
+  height: 90%;
+  width: 100%;
+  /* background-color: brown; */
+  display: flex;
+  justify-content: space-between;
+  gap: 2px;
+  padding: 1rem;
+}
+
+.duration-dis-container {
+  display: flex;
+  justify-content: center;
+}
+
+.destination-container {
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.source-container {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.source-time {
+  color: rgb(0, 171, 11);
+}
+
+.destination-time {
+  color: rgb(0, 171, 11);
+}
+
+.destini {
+  text-align: end;
+}
+
+/* PASSENGERS */
+
+.passenger-sec-det {
+  height: 20px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+.passenger-details-sec {
+  position: absolute;
+  width: 90%;
+  top: 30vh;
+  display: flex;
+  border-radius: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  display: none;
+  margin-top: 10%;
+}
+
+.attribute-div {
+  background-color: rgb(0, 171, 11);
+  width: 100%;
+  height: 10%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  text-align: end;
+}
+
+.values-div {
+  /* background-color: red; */
+  width: 100%;
+  display: flex;
+  background-color: rgba(78, 216, 78, 0.189);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.passenger-info-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid black;
+}
+.footer-container {
+  height: 50vh;
+  width: 100%;
+  display: none;
+}
+
+.head,
+.desc {
+  color: #fff;
+  /* white-space: nowrap; */
+  animation: slideRight 1.4s ease-in-out;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(120deg, #000000 30%, #ffffff 50%, #000000 70%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+@media screen and (max-width: 879px) {
+  .head {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (max-width: 714px) {
+  .header-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .footer-container {
+    height: 40vh;
+  }
+}
+
+@media screen and (max-width: 654.4px) {
+  .content {
+    align-items: start;
+  }
+  .menu_button {
+    display: block;
+  }
+  .nav-bar {
+    height: 0px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: end;
+
+    width: 40%;
+    top: 70px;
+    left: 56%;
+    border-radius: 0px 0px 1rem 1rem;
+    overflow: hidden;
+    justify-content: center;
+    transition: 0.2s;
+    background: rgba(0, 0, 0, 0.913);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(17px);
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  .nav-bar a {
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  .nav-bar.active {
+    height: 200px;
+    padding: 1rem;
+  }
+  .nav-bar.active a {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .head {
+    font-size: 5rem;
+  }
+
+  .content {
+    top: 15%;
+  }
+}
+
+@media screen and (max-width: 391px) {
+  .head {
+    font-size: 4.5rem;
+  }
+  .passenger-details-sec {
+    top: 35vh;
+  }
+}
+
+@media screen and (max-width: 357px) {
+  .head {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 322px) {
+  .Train-detail-section {
+    width: 250px;
+  }
+
+  .head {
+    font-size: 3.5rem;
+  }
+  .passenger-details-sec {
+    width: 250px;
+  }
+  .nav-bar {
+    width: 60%;
+    left: 35%;
+  }
+}
+
+@media screen and (max-width: 733px) {
+  .input-container {
+    box-shadow: 0 19px 30px rgba(0, 0, 0, 0.137);
+  }
+
+  .search-button {
+    top: 80px;
+  }
+
+  .train-sec-det {
+    top: 100px;
+  }
+}
+
+/* forBIGGERSCREEN */
+@media screen and (min-width: 322px) {
+  .Train-detail-section {
+    transition-duration: 200ms;
+    width: 90%;
+  }
+}
