@@ -91,6 +91,32 @@ document.addEventListener("DOMContentLoaded", function () {
     const depTime = departureTime.toLocaleString("en-IN", options1);
     const arrTime = arrivalTime.toLocaleString("en-IN", options1);
 
+    // Calculating the duration
+    
+    // Parse depTime
+    let [depClock, depPeriod] = depTime.toLowerCase().split(' ');
+    let [depHours, depMinutes, depSeconds] = depClock.split(':').map(Number);
+    if (depPeriod === 'pm' && depHours !== 12) depHours += 12;
+    if (depPeriod === 'am' && depHours === 12) depHours = 0;
+    let depTotalMinutes = depHours * 60 + depMinutes;
+
+    // Parse arrTime
+    let [arrClock, arrPeriod] = arrTime.toLowerCase().split(' ');
+    let [arrHours, arrMinutes, arrSeconds] = arrClock.split(':').map(Number);
+    if (arrPeriod === 'pm' && arrHours !== 12) arrHours += 12;
+    if (arrPeriod === 'am' && arrHours === 12) arrHours = 0;
+    let arrTotalMinutes = arrHours * 60 + arrMinutes;
+
+    // Calculate duration
+    let durationMinutes = arrTotalMinutes - depTotalMinutes;
+    if (durationMinutes < 0) durationMinutes += 24 * 60;
+
+    let hours = Math.floor(durationMinutes / 60);
+    let minutes = durationMinutes % 60;
+
+
+    
+
     const journeyclass = fetcheddata.data.journeyClass;
     // const quota = fetcheddata.data.quota;
     // const bookingdate = fetcheddata.data.bookingDate;
@@ -165,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
           `;
           //duration-dis
           durationdis.innerHTML = `
-          <p>--${distance} Km--</p>
+          <p>-${hours}h ${minutes}m-</p>
 
 
         `;
