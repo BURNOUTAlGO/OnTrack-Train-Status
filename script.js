@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
           `;
           //duration-dis
           durationdis.innerHTML = `
-          <p>-- ${distance} Km --</p>
+          <p>--${distance} Km--</p>
 
 
         `;

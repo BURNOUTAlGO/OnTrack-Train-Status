@@ -94,7 +94,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: blue; */
 }
 
 .head {
@@ -186,17 +185,19 @@ body {
   width: 100%;
   top: 95px;
   position: relative;
-  height: 20px;
+  /* background-color: red; */
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  
+
 }
 
 .Train-detail-section {
   /* height: auto; */
   position: absolute;
-  width: 90%;
+  width: 100%;
   top: 25%;
   margin-inline: auto;
   border-radius: 1rem;
@@ -205,6 +206,7 @@ body {
   overflow: hidden;
   box-shadow: 0 4px 11px rgba(29, 29, 29, 0.188);
   display: none;
+  
 }
 
 .train-no-name {
@@ -230,7 +232,8 @@ body {
   width: 100%;
   height: 80%;
   background-color: rgba(78, 216, 78, 0.189);
-  padding: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -302,7 +305,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-inline: auto;
-  padding: 1rem;
+  
 }
 
 .passenger-details-sec {
@@ -329,6 +332,7 @@ body {
   align-items: center;
   gap: 1rem;
   text-align: end;
+
 }
 
 .values-div {
@@ -406,9 +410,7 @@ a {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  .footer-container {
-    height: 40vh;
-  }
+
 }
 
 @media screen and (max-width: 654.4px) {
@@ -462,15 +464,28 @@ a {
     top: 15%;
   }
 }
+@media screen and (max-width: 414px) {
+
+  .passenger-details-sec {
+    top: 35vh;
+  }
+}
 
 @media screen and (max-width: 391px) {
   .head {
     font-size: 4.5rem;
   }
   .passenger-details-sec {
-    top: 35vh;
+    top: 40vh;
   }
 }
+@media screen and (min-width: 355px) {
+  .footer-container{
+    height: 50rex;
+  }
+}
+
+
 
 @media screen and (max-width: 357px) {
   .head {
