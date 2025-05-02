@@ -9,7 +9,7 @@
   box-sizing: border-box;
   font-family: Myfont;
   /* color: white; */
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 body {
@@ -34,10 +34,9 @@ body {
   align-items: center;
   padding-right: 5rem;
   padding-left: 5rem;
-  background: rgba(0, 0, 0, 0.705);
-  backdrop-filter: blur(40px);
+  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(17px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.219);
+  border-bottom: 1px solid rgba(3, 3, 3, 0.219);
 }
 
 .header-title {
@@ -99,13 +98,12 @@ body {
 .head {
   color: white;
   font-size: 8rem;
-  text-shadow: rgb(0, 0, 0) 1px 0 20px;
+
 }
 
 .desc {
   color: white;
   font-size: 1rem;
-  text-shadow: rgb(0, 0, 0) 1px 0 10px;
 }
 
 /* banner section */
@@ -159,6 +157,7 @@ body {
   font-size: large;
   outline: none;
   border: none;
+  color: white;
   background-color: rgb(0, 0, 0);
 }
 
@@ -166,9 +165,10 @@ body {
   position: absolute;
   top: 70px;
   height: 45px;
-  width: 140px;
+  width: 125px;
   border-radius: 5rem;
-  background-color: rgb(54, 147, 0);
+  /* background-color: rgb(54, 147, 0); */
+  background-color: #f2b118;
   box-shadow: 0 4px 11px rgba(33, 33, 33, 0.486);
   font-size: large;
   color: white;
@@ -177,7 +177,8 @@ body {
 }
 
 .search-button:hover {
-  background-color: rgb(0, 86, 9);
+  /* background-color: rgb(0, 86, 9); */
+  background-color: #d2a513;
   transition-duration: 300ms;
 }
 
@@ -215,7 +216,11 @@ body {
   padding: 1rem;
   display: flex;
   gap: 1rem;
-  background-color: rgb(0, 171, 11);
+  /* background-color: rgb(0, 171, 11); */
+  background-color: #f2b118;
+  color: rgb(0, 0, 0);
+}
+.train-no-name p{
   color: white;
 }
 
@@ -231,7 +236,8 @@ body {
 .train-details {
   width: 100%;
   height: 80%;
-  background-color: rgba(78, 216, 78, 0.189);
+  /* background-color: rgba(78, 216, 78, 0.189); */
+  background-color: #ffffff;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   display: flex;
@@ -284,7 +290,7 @@ body {
 }
 
 .source-time {
-  color: rgb(0, 171, 11);
+  color: rgb(249, 1, 1);
 }
 
 .destination-time {
@@ -323,7 +329,7 @@ body {
 }
 
 .attribute-div {
-  background-color: rgb(0, 171, 11);
+  background-color:#f2b118;
   width: 100%;
   height: 10%;
   padding: 1rem;
@@ -333,13 +339,20 @@ body {
   gap: 1rem;
   text-align: end;
 
+
 }
+.attribute-div p{
+  color :white;
+  font-weight: 600;
+
+}
+
 
 .values-div {
   /* background-color: red; */
   width: 100%;
   display: flex;
-  background-color: rgba(78, 216, 78, 0.189);
+  background-color: rgb(255, 255, 255);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -351,7 +364,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(169, 169, 169);
 }
 .footer-container {
   height: 50vh;
